@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 # Change your executable name to something creative!
-set(NAME display_experiments) # <-- Name your project/executable here!
+set(NAME simple_motor) # <-- Name your project/executable here!
 #set(PICO_BOARD pico_w)
 
 include(pimoroni_pico_import.cmake)
@@ -30,6 +30,7 @@ include(drivers/motor/motor)
 include(drivers/analog/analog)
 include(drivers/encoder/encoder)
 include(drivers/pid/pid)
+include(drivers/plasma/plasma)
 #include(libraries/pico_explorer/pico_explorer)
 include(libraries/bitmap_fonts/bitmap_fonts)
 include(libraries/hershey_fonts/hershey_fonts)
@@ -47,6 +48,7 @@ target_link_libraries(${NAME}
         analog
         encoder
         pid
+        plasma
         )
 
 # create map/bin/hex file etc.
